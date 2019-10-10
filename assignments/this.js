@@ -9,6 +9,8 @@
  * write out a code example of each explanation above
  */
 
+//-------------------------------------------------------------------------------------------------------------
+
 // Principle 1
 
 // code example for Window Binding
@@ -18,43 +20,45 @@ var myFunction = function() {
 
 myFunction(); // Window
 
+//-------------------------------------------------------------------------------------------------------------
+
 // Principle 2
 
 // code example for Implicit Binding
 
-function wine() {
+function beer() {
   console.log(this.a);
 }
 
 var obj = {
   a: 2,
-  wine: wine
+  beer: beer
 };
 
-obj.wine();
+obj.beer();
+
+//-------------------------------------------------------------------------------------------------------------
 
 // Principle 3
 
 // code example for New Binding
 
 function Wine() {
-  /*
-   1- create a new object using the object literal 
- var this = {};
- */
+  //  var this = {};
 
-  // 2- add properties and methods
-  this.name = 'Daniel';
+  this.name = 'Merlot';
   this.say = function() {
     return 'I am ' + this.name;
   };
-
-  // 3- return this;
+  console.log(this.say());
+  // return this;
 }
 
-var name = 'Ahmed';
+var name = 'Pinot Noir';
 var result = new Wine();
 console.log(result.name);
+
+//-------------------------------------------------------------------------------------------------------------
 
 // Principle 4
 
